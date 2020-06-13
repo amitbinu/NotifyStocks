@@ -4,11 +4,14 @@ from person import person
 import importlib
 sp = importlib.import_module("getStockPrice")
 
+config = ConfigParser.ConfigParser()
+config.read("../apiKeys.properties")
+apiKey=config.get("financialmodelingprep", "notifyStocksApiKey")
+
 class notify():
     def __init__(self):
-        config = ConfigParser.ConfigParser()
-        config.read("../apiKeys.properties")
-        apiKey=config.get("financialmodelingprep", "notifyStocksApiKey")
+        
+        
 
         companies=["ZNGA","DGLY","SNE"]
 
