@@ -1,1 +1,1 @@
-del src\*.pyc
+del src\server\*.pyc
